@@ -1,4 +1,3 @@
-# test_bot.py
 import telebot
 import re
 import os
@@ -10,7 +9,7 @@ from support_service_app.history import load_chat_histories
 from support_service_app.history import save_chat_histories
 from support_service_app.db import create_docs_for_indexing
 from support_service_app.db import create_or_load_chroma
-# Настройка логирования
+
 logging.basicConfig(level=logging.INFO)
 
 load_dotenv()
@@ -62,11 +61,11 @@ def main(message):
     if has_phone:
         reply = "Спасибо! Мы свяжемся с вами в ближайшее время."
     else:
-        # process_query уже обновляет историю в файле
+
         reply = chat_manager.process_query(chat_id, user_text)
 
     # Ограничиваем историю по количеству сообщений
-    chat_histories = load_chat_histories()  # обновляем данные после process_query
+    chat_histories = load_chat_histories()
     if len(chat_histories.get(chat_id, [])) > MAX_HISTORY:
         chat_histories[chat_id] = chat_histories[chat_id][-MAX_HISTORY:]
         save_chat_histories(chat_histories)
