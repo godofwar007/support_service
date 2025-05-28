@@ -62,7 +62,10 @@
 ## Примеры переписки
 
 Ниже приведены скриншоты примеров диалогов с ботом:
+
 Документы по которым бот ищет ответы добавлены в репозиторий - директория knowlage.
+
+Скриншоты кликабельны.
 
 [![Пример 1](https://i.ibb.co/b5CFxtn7/image.png)](https://i.ibb.co/b5CFxtn7/image.png)  
 [![Пример 2](https://i.ibb.co/S71NncHF/image.png)](https://i.ibb.co/S71NncHF/image.png)  
